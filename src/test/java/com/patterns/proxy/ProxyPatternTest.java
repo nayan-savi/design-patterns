@@ -26,7 +26,7 @@ public class ProxyPatternTest {
     }
 
     @Test
-    public void removeAdminTest() {
+    public void removeCmdAdminTest() {
         CommandExecutor executor = new CommandExecutorProxy("nayan", "1234");
         try {
             executor.runCommand("rm -f proxy.txt");
@@ -36,7 +36,7 @@ public class ProxyPatternTest {
     }
 
     @Test
-    public void removeNonAdminTest() {
+    public void removeCmdNonAdminTest() {
         CommandExecutor executor = new CommandExecutorProxy("demo", "124");
         try {
             executor.runCommand("rm -f proxy.txt");
